@@ -1,0 +1,33 @@
+---
+mappings:
+- body:
+    mappings:
+    - employeeNumber:
+        template: "{{$apiRequest.body.employeeNumber}}"
+    - firstName:
+        template: "{{$apiRequest.body.firstName}}"
+    - middleInitial:
+        template: "{{$apiRequest.body.middleInitial}}"
+    - lastName:
+        template: "{{$apiRequest.body.lastName}}"
+    - department:
+        template: "{{$apiRequest.body.department}}"
+    - phoneNumber:
+        template: "{{$apiRequest.body.phoneNumber}}"
+    - hireDate:
+        template: "{{$apiRequest.body.hireDate}}"
+    - job:
+        template: "{{$apiRequest.body.job}}"
+    - educationLevel:
+        expression: "$apiRequest.body.educationLevel"
+    - sex:
+        template: "{{$apiRequest.body.sex}}"
+    - dateOfBirth:
+        template: "{{$apiRequest.body.dateOfBirth}}"
+    - salary:
+        expression: "$apiRequest.body.salary"
+    - bonus:
+        expression: "$apiRequest.body.bonus"
+    - commission:
+        expression: "$apiRequest.body.commission"
+version: 1

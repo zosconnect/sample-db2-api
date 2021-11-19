@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "body": {
+            "type": "object",
+            "properties": {
+                "WORKDEPT": {
+                    "type": [
+                        "null",
+                        "string"
+                    ],
+                    "maxLength": 4000,
+                    "description": "Nullable VARCHAR(4000)"
+                },
+                "JOB": {
+                    "type": [
+                        "null",
+                        "string"
+                    ],
+                    "maxLength": 4000,
+                    "description": "Nullable VARCHAR(4000)"
+                }
+            },
+            "required": [
+                "WORKDEPT",
+                "JOB"
+            ],
+            "description": "Service getEmployees invocation HTTP request body"
+        }
+    },
+    "required": [
+        "body"
+    ],
+    "description": "General wrapper for Db2 z/OS Asset requests"
+}

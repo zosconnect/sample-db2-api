@@ -1,0 +1,8 @@
+---
+mappings:
+- body:
+    mappings:
+    - WORKDEPT:
+        template: "{{$exists($cookies.department) ? $cookies.department : \"%\"}}"
+    - JOB:
+        template: "{{$exists($queryParameters.job) ? $queryParameters.job: \"%\"}}"

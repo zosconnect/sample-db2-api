@@ -1,0 +1,12 @@
+---
+version: 1
+response_200.yaml:
+  condition: "($zosAssetResponse.body.StatusCode = 200) and ($zosAssetResponse.body.\"\
+    Update Count\" = 1)"
+  httpStatusCode: 200
+response_404.yaml:
+  condition: "$zosAssetResponse.body.\"Update Count\" = 0"
+  httpStatusCode: 404
+response_500.yaml:
+  condition: true
+  httpStatusCode: 500

@@ -1,0 +1,32 @@
+---
+mappings:
+- body:
+    mappings:
+    - EMPNO:
+        template: "{{$body.employeeNumber}}"
+    - FIRSTNME:
+        template: "{{$body.firstName}}"
+    - MIDINIT:
+        template: "{{$body.middleInitial}}"
+    - LASTNAME:
+        template: "{{$body.lastName}}"
+    - WORKDEPT:
+        template: "{{$body.department}}"
+    - PHONENO:
+        template: "{{$body.phoneNumber}}"
+    - HIREDATE:
+        template: "{{$body.hireDate}}"
+    - JOB:
+        template: "{{$body.job}}"
+    - EDLEVEL:
+        expression: "$body.educationLevel"
+    - SEX:
+        template: "{{$body.sex}}"
+    - BIRTHDATE:
+        template: "{{$body.dateOfBirth}}"
+    - SALARY:
+        expression: "$body.salary"
+    - BONUS:
+        expression: "$body.bonus"
+    - COMM:
+        expression: "$body.commission"

@@ -1,0 +1,46 @@
+---
+mappings:
+- body:
+    foreach:
+      input: "$zosAssetResponse.body.\"ResultSet Output\""
+      mappings:
+      - summary:
+          mappings:
+          - bio:
+              template: "{{$item.FIRSTNME}} works in {{$item.WORKDEPT}} department.\
+                \  Compensation is {{$item.SALARY}} USD."
+      - personal:
+          mappings:
+          - firstName:
+              template: "{{$item.FIRSTNME}}"
+          - middleInitial:
+              template: "{{$item.MIDINIT}}"
+          - lastName:
+              template: "{{$item.LASTNAME}}"
+          - sex:
+              template: "{{$item.SEX}}"
+          - dateOfBirth:
+              template: "{{$item.BIRTHDATE}}"
+      - work:
+          mappings:
+          - employeeNumber:
+              template: "{{$item.EMPNO}}"
+          - department:
+              template: "{{$item.WORKDEPT}}"
+          - phoneNumber:
+              template: "{{$item.PHONENO}}"
+          - hireDate:
+              template: "{{$item.HIREDATE}}"
+          - job:
+              template: "{{$item.JOB}}"
+          - educationLevel:
+              expression: "$item.EDLEVEL"
+          - pay:
+              mappings:
+              - salary:
+                  expression: "$item.SALARY"
+              - bonus:
+                  expression: "$item.BONUS"
+              - commission:
+                  expression: "$item.COMM"
+version: 1

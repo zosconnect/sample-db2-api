@@ -1,0 +1,4 @@
+# Default .editorconfig file
+# root = true sets the top-most .editorconfig file
+# !!! hack to avoid formatting this project outside code gen !!!
+root = true

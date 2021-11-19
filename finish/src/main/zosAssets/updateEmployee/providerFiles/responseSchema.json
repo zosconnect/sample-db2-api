@@ -1,0 +1,57 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "headers": {
+            "type": "object",
+            "properties": {}
+        },
+        "statusCode": {
+            "type": "integer",
+            "multipleOf": 1,
+            "minimum": 100,
+            "maximum": 600,
+            "description": "HTTP status code"
+        },
+        "cookies": {
+            "type": "object",
+            "properties": {}
+        },
+        "body": {
+            "type": "object",
+            "properties": {
+                "Update Count": {
+                    "type": "integer",
+                    "multipleOf": 1,
+                    "minimum": 0,
+                    "maximum": 32767,
+                    "description": "Update Count"
+                },
+                "StatusDescription": {
+                    "type": "string",
+                    "description": "Service invocation status description"
+                },
+                "StatusCode": {
+                    "type": "integer",
+                    "multipleOf": 1,
+                    "minimum": 100,
+                    "maximum": 600,
+                    "description": "Service invocation HTTP status code"
+                }
+            },
+            "required": [
+                "StatusDescription",
+                "StatusCode",
+                "Update Count"
+            ],
+            "description": "Service updateEmployee invocation HTTP response body"
+        }
+    },
+    "required": [
+        "body",
+        "headers",
+        "cookies",
+        "statusCode"
+    ],
+    "description": "General wrapper for Db2 z/OS asset responses"
+}

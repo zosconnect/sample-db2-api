@@ -1,0 +1,10 @@
+---
+version: 1.0
+type: "db2-1.0"
+description: "Add the details of an individual employee."
+providerProperties:
+  description: "Add the details of an individual employee."
+  serviceName: "addEmployee"
+  collectionId: "SYSIBMSERVICE"
+  version: "V1"
+  connectionRef: "db2conn"
