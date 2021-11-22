@@ -1,0 +1,31 @@
+apiVersion: 1.0.0
+metadata:
+  name: sample-db2-api
+projects:
+  - name: employees-api
+    source:
+      location: 'https://github.com/zosconnect/sample-db2-api.git'
+      type: github
+      branch: main
+      sparseCheckoutDir: start
+components:
+  - mountSources: true
+    endpoints:
+      - attributes:
+          cookiesAuthEnabled: 'true'
+          public: 'true'
+          path: /zosConnect/designer/
+          secure: 'true'
+        name: zosconnect-ui-endpoint
+        port: 9080
+        env:
+          - name: ZCON_DESIGNER_PROJECT
+            value: /projects/employees-api
+    memoryLimit: 4927M
+    type: dockerimage
+    image: 'icr.io/zosconnect/ibm-zcon-designer:beta'
+    alias: zosconnect
+  - id: redhat/vscode-yaml/latest
+    type: chePlugin
+  - id: redhat/vscode-xml/latest
+    type: chePlugin
