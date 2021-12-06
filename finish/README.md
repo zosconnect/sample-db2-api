@@ -5,7 +5,7 @@
 The EmployeesApi project allows users to create, read, update, and delete employees in the Db2 sample employee table (DSN8B10.EMP).
 
 ## Configuration
-To be able to connect to your Db2 instance in which you have the employee table sample installed you must first configure a `<db2Connection />` in this project. Create a file named `db2.xml` in the directory `./src/main/liberty/config`. Copy and customize the following contents into this file.
+To be able to connect to your Db2 instance in which you have the employee table sample installed you must first configure a `<zosconnect_db2connection />` in this project. Create a file named `db2.xml` in the directory `./src/main/liberty/config`. Copy and customize the following contents into this file.
 ```
 <server>
     <featureManager>
