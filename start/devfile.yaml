@@ -18,9 +18,9 @@ components:
           secure: 'true'
         name: zosconnect-ui-endpoint
         port: 9080
-        env:
-          - name: ZCON_DESIGNER_PROJECT
-            value: /projects/employees-api
+    env:
+      - name: ZCON_DESIGNER_PROJECT
+        value: /projects/employees-api
     memoryLimit: 4927M
     type: dockerimage
     image: 'icr.io/zosconnect/ibm-zcon-designer:beta'
