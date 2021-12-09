@@ -20,7 +20,7 @@ components:
         port: 9080
     env:
       - name: ZCON_DESIGNER_PROJECT
-        value: /projects/employees-api
+        value: /projects/employees-api/start
     memoryLimit: 4927M
     type: dockerimage
     image: 'icr.io/zosconnect/ibm-zcon-designer:beta'
