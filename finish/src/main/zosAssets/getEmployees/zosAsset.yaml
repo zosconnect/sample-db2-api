@@ -7,4 +7,4 @@ providerProperties:
   serviceName: "getEmployees"
   collectionId: "SYSIBMSERVICE"
   version: "V1"
-  connectionRef: "db2conn"
+  connectionRef: "db2Conn"
