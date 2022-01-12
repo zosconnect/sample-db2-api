@@ -8,7 +8,7 @@ The `start` directory contains an inital project layout which can be used as the
 
 ## Using the samples
 
-Follow the instructions in the [IBM Documentation](https://www.ibm.com/docs/zosconn/beta?topic=tutorial-create-your-first-zos-connect-api) on how to use these examples.
+Follow the instructions in the [IBM Documentation](https://www.ibm.com/docs/en/zosconnect/beta?topic=tutorial-create-your-first-zos-connect-api) on how to use these examples.
 
 ## License
 
