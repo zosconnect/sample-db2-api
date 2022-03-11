@@ -127,7 +127,7 @@ paths:
       operationId: employeesGet
       parameters:
       - name: department
-        in: cookie
+        in: query
         required: false
         style: form
         explode: true
@@ -389,7 +389,7 @@ components:
         type: string
     department:
       name: department
-      in: cookie
+      in: query
       required: false
       style: form
       explode: true
