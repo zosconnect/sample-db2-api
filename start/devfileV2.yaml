@@ -1,0 +1,27 @@
+schemaVersion: 2.1.0
+metadata:
+  name: sample-db2-api
+attributes:
+  controller.devfile.io/storage-type: ephemeral
+projects:
+  - git:
+      checkoutFrom:
+        revision: main
+      remotes:
+        origin: 'https://github.com/zosconnect/sample-db2-api.git'
+    name: employees-api
+components:
+    - name: zosconnect
+      container:
+        endpoints:
+          - exposure: public
+            name: zosconnect-ui
+            path: /zosConnect/designer/
+            protocol: http
+            targetPort: 9080
+        env:
+          - name: ZCON_DESIGNER_PROJECT
+            value: /projects/employees-api/start
+        image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.70'
+        memoryLimit: 4927M
+        mountSources: true
