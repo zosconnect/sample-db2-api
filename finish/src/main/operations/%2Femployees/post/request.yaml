@@ -1,32 +1,61 @@
 ---
+version: "1.2"
 mappings:
 - body:
     mappings:
     - EMPNO:
+        required: true
+        nullable: true
         template: "{{$body.employeeNumber}}"
     - FIRSTNME:
+        required: true
+        nullable: true
         template: "{{$body.firstName}}"
     - MIDINIT:
+        required: true
+        nullable: true
         template: "{{$body.middleInitial}}"
     - LASTNAME:
+        required: true
+        nullable: true
         template: "{{$body.lastName}}"
     - WORKDEPT:
+        required: true
+        nullable: true
         template: "{{$body.department}}"
     - PHONENO:
+        required: true
+        nullable: true
         template: "{{$body.phoneNumber}}"
     - HIREDATE:
+        required: true
+        nullable: true
         template: "{{$body.hireDate}}"
     - JOB:
+        required: true
+        nullable: true
         template: "{{$body.job}}"
     - EDLEVEL:
+        required: true
+        nullable: true
         expression: "$body.educationLevel"
     - SEX:
+        required: true
+        nullable: true
         template: "{{$body.sex}}"
     - BIRTHDATE:
+        required: true
+        nullable: true
         template: "{{$body.dateOfBirth}}"
     - SALARY:
+        required: true
+        nullable: true
         expression: "$body.salary"
     - BONUS:
+        required: true
+        nullable: true
         expression: "$body.bonus"
     - COMM:
+        required: true
+        nullable: true
         expression: "$body.commission"

@@ -1,33 +1,61 @@
 ---
+version: "1.2"
 mappings:
 - body:
     mappings:
     - employeeNumber:
+        required: false
+        nullable: false
         template: "{{$zosAssetResponse.body.\"ResultSet Output\".EMPNO}}"
     - firstName:
+        required: false
+        nullable: false
         template: "{{$zosAssetResponse.body.\"ResultSet Output\".FIRSTNME}}"
     - middleInitial:
+        required: false
+        nullable: false
         template: "{{$zosAssetResponse.body.\"ResultSet Output\".MIDINIT}}"
     - lastName:
+        required: false
+        nullable: false
         template: "{{$zosAssetResponse.body.\"ResultSet Output\".LASTNAME}}"
     - department:
+        required: false
+        nullable: false
         template: "{{$zosAssetResponse.body.\"ResultSet Output\".WORKDEPT}}"
     - phoneNumber:
+        required: false
+        nullable: false
         template: "{{$zosAssetResponse.body.\"ResultSet Output\".PHONENO}}"
     - hireDate:
+        required: false
+        nullable: false
         template: "{{$zosAssetResponse.body.\"ResultSet Output\".HIREDATE}}"
     - job:
+        required: false
+        nullable: false
         template: "{{$zosAssetResponse.body.\"ResultSet Output\".JOB}}"
     - educationLevel:
+        required: false
+        nullable: false
         expression: "$zosAssetResponse.body.\"ResultSet Output\".EDLEVEL"
     - sex:
+        required: false
+        nullable: false
         template: "{{$zosAssetResponse.body.\"ResultSet Output\".SEX}}"
     - dateOfBirth:
+        required: false
+        nullable: false
         template: "{{$zosAssetResponse.body.\"ResultSet Output\".BIRTHDATE}}"
     - salary:
+        required: false
+        nullable: false
         expression: "$zosAssetResponse.body.\"ResultSet Output\".SALARY"
     - bonus:
+        required: false
+        nullable: false
         expression: "$zosAssetResponse.body.\"ResultSet Output\".BONUS"
     - commission:
+        required: false
+        nullable: false
         expression: "$zosAssetResponse.body.\"ResultSet Output\".COMM"
-version: 1
