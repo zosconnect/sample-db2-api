@@ -1,33 +1,61 @@
 ---
+version: "1.2"
 mappings:
 - body:
     mappings:
     - employeeNumber:
+        required: false
+        nullable: false
         template: "{{$apiRequest.body.employeeNumber}}"
     - firstName:
+        required: false
+        nullable: false
         template: "{{$apiRequest.body.firstName}}"
     - middleInitial:
+        required: false
+        nullable: false
         template: "{{$apiRequest.body.middleInitial}}"
     - lastName:
+        required: false
+        nullable: false
         template: "{{$apiRequest.body.lastName}}"
     - department:
+        required: false
+        nullable: false
         template: "{{$apiRequest.body.department}}"
     - phoneNumber:
+        required: false
+        nullable: false
         template: "{{$apiRequest.body.phoneNumber}}"
     - hireDate:
+        required: false
+        nullable: false
         template: "{{$apiRequest.body.hireDate}}"
     - job:
+        required: false
+        nullable: false
         template: "{{$apiRequest.body.job}}"
     - educationLevel:
+        required: false
+        nullable: false
         expression: "$apiRequest.body.educationLevel"
     - sex:
+        required: false
+        nullable: false
         template: "{{$apiRequest.body.sex}}"
     - dateOfBirth:
+        required: false
+        nullable: false
         template: "{{$apiRequest.body.dateOfBirth}}"
     - salary:
+        required: false
+        nullable: false
         expression: "$apiRequest.body.salary"
     - bonus:
+        required: false
+        nullable: false
         expression: "$apiRequest.body.bonus"
     - commission:
+        required: false
+        nullable: false
         expression: "$apiRequest.body.commission"
-version: 1

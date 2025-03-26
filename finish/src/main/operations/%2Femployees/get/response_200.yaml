@@ -1,46 +1,86 @@
 ---
+version: "1.2"
 mappings:
 - body:
+    required: true
+    nullable: false
     foreach:
       input: "$zosAssetResponse.body.\"ResultSet Output\""
       mappings:
       - summary:
+          required: false
+          nullable: false
           mappings:
           - bio:
+              required: false
+              nullable: false
               template: "{{$item.FIRSTNME}} works in {{$item.WORKDEPT}} department.\
                 \  Compensation is {{$item.SALARY}} USD."
       - personal:
+          required: false
+          nullable: false
           mappings:
           - firstName:
+              required: false
+              nullable: false
               template: "{{$item.FIRSTNME}}"
           - middleInitial:
+              required: false
+              nullable: false
               template: "{{$item.MIDINIT}}"
           - lastName:
+              required: false
+              nullable: false
               template: "{{$item.LASTNAME}}"
           - sex:
+              required: false
+              nullable: false
               template: "{{$item.SEX}}"
           - dateOfBirth:
+              required: false
+              nullable: false
               template: "{{$item.BIRTHDATE}}"
       - work:
+          required: false
+          nullable: false
           mappings:
           - employeeNumber:
+              required: false
+              nullable: false
               template: "{{$item.EMPNO}}"
           - department:
+              required: false
+              nullable: false
               template: "{{$item.WORKDEPT}}"
           - phoneNumber:
+              required: false
+              nullable: false
               template: "{{$item.PHONENO}}"
           - hireDate:
+              required: false
+              nullable: false
               template: "{{$item.HIREDATE}}"
           - job:
+              required: false
+              nullable: false
               template: "{{$item.JOB}}"
           - educationLevel:
+              required: false
+              nullable: false
               expression: "$item.EDLEVEL"
           - pay:
+              required: false
+              nullable: false
               mappings:
               - salary:
+                  required: false
+                  nullable: false
                   expression: "$item.SALARY"
               - bonus:
+                  required: false
+                  nullable: false
                   expression: "$item.BONUS"
               - commission:
+                  required: false
+                  nullable: false
                   expression: "$item.COMM"
-version: 1

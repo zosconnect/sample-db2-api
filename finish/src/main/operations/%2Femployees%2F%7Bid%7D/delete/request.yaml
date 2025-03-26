@@ -1,6 +1,9 @@
 ---
+version: "1.2"
 mappings:
 - body:
     mappings:
     - EMPNO:
+        required: true
+        nullable: true
         template: "{{$pathParameters.id}}"

@@ -1,8 +1,14 @@
 ---
+version: "1.2"
 mappings:
 - body:
     mappings:
     - WORKDEPT:
-        template: "{{$exists($queryParameters.department) ? $queryParameters.department : \"%\"}}"
+        required: true
+        nullable: true
+        template: "{{$exists($queryParameters.department) ? $queryParameters.department\
+          \ : \"%\"}}"
     - JOB:
+        required: true
+        nullable: true
         template: "{{$exists($queryParameters.job) ? $queryParameters.job: \"%\"}}"
