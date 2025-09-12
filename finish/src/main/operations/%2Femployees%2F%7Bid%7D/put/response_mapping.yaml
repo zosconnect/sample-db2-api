@@ -5,7 +5,8 @@ response_200.yaml:
     Update Count\" = 1)"
   httpStatusCode: 200
 response_404.yaml:
-  condition: "$zosAssetResponse.body.\"Update Count\" = 0"
+  condition: "($zosAssetResponse.body.\"Update Count\" = 0) and ($zosAssetResponse.body.StatusCode\
+    \ = 200)"
   httpStatusCode: 404
 response_500.yaml:
   condition: true
