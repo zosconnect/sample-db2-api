@@ -6,4 +6,5 @@ mappings:
     - message:
         required: false
         nullable: false
-        template: "{{$error.message}}{{$zosAssetResponse.body.StatusDescription}}"
+        template: "{{$exists($error.message)? $error.message : \"Internal Server Error\"\
+          }}"
